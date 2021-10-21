@@ -21,51 +21,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tx_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/etx_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tx_logo" />
-
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etx_email"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:autofillHints="emailAddress"
-        android:inputType="textEmailAddress"
+        android:layout_marginTop="32dp"
+        android:hint="@string/etx_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tx_email"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toBottomOf="@id/tx_logo">
 
-    <TextView
-        android:id="@+id/tx_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/etx_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etx_email" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/on_primary"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/on_secondary"
+            app:hintTextColor="@color/on_secondary" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etx_password"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:autofillHints="password"
-        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:background="@color/on_primary"
+        android:hint="@string/etx_password"
         app:layout_constraintEnd_toEndOf="parent"
+        app:passwordToggleTint="@color/primary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tx_password"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toBottomOf="@id/etx_email"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/on_primary"
+            android:inputType="textPassword"
+            android:textColor="@color/on_secondary"
+            app:hintTextColor="@color/on_secondary" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_login"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

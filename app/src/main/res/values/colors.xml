@@ -12,8 +12,8 @@
     <color name="background">@color/primary</color>
     <color name="background_variant">@color/primary_variant</color>
 
-    <color name="text_present">@color/on_primary</color>
-    <color name="text">@color/on_secondary</color>
+    <color name="text_present">@color/primary_variant</color>
+    <color name="text">@color/primary</color>
 
     <!-- Bottom Navigation -->
     <color name="bottom_navigation_item">@color/primary</color>
